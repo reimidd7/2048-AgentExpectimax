@@ -126,13 +126,9 @@ class Agent {
                     score += weights[i][j] * Math.log2(tile.value);
 
                     // Reward for tiles with value greater than 64
-                    if (tile.value = 64) {
-                       // console.log("       tilevalue 64");
-                        score += 1000; // Adjust the reward value as needed
-                    } else if (tile.value >= 128) {
-                        //console.log("       tilevalue 128");
-                        score += 10000;
-                    }
+                    if (tile.value >= 64) {
+                        score += 10000; // Adjust the reward value as needed
+                    } 
                 }
             }
         }
